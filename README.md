@@ -44,7 +44,22 @@
    npm install
    ```
 
-3. **Run the development server:**
+3. **Set up environment variables:**
+   - Create a `.env.local` file in the root directory
+   - Add the following variables:
+     ```
+     NEXTAUTH_URL=http://localhost:3000
+     NEXTAUTH_SECRET=your-nextauth-secret
+     GOOGLE_CLIENT_ID=your-google-client-id
+     GOOGLE_CLIENT_SECRET=your-google-client-secret
+     ADMIN_EMAIL=your-admin-email@example.com
+     ```
+   - Replace the placeholders with your actual values:
+     - `NEXTAUTH_SECRET`: Generate a random string for NextAuth.js
+     - `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`: Get these from the Google Cloud Console
+     - `ADMIN_EMAIL`: Your Google email address for admin access
+
+4. **Run the development server:**
    ```bash
    npm run dev
    ```
@@ -57,3 +72,7 @@
 
 ## License
 This project is for demonstration and educational purposes. Please adapt and use as needed for your own trading or fintech projects.
+
+## Deployment
+
+This project is configured for deployment on Vercel. Simply push your changes to GitHub and Vercel will automatically deploy them.
